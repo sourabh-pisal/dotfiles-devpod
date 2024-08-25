@@ -146,6 +146,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # set alias
 alias v="nvim"
 alias c="clear"
+alias tmux="tmux -u"
 
 # use vim-mode
 set -o vi

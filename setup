@@ -21,3 +21,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Set zsh as default shell
 sudo chsh "$(id -un)" --shell "$(which zsh)"
+
+# Create .profile
+touch ~/.profile

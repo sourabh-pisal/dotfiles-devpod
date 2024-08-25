@@ -96,6 +96,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 source <(fzf --zsh)
 
 # User configuration
@@ -132,9 +134,6 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 
-# Set dotfiles dir
-alias dotfiles="/usr/bin/git --git-dir=$HOME/Workplace/dotfiles/ --work-tree=$HOME"
-
 # Set config auto complition
 complete -C "/usr/bin/git" config 
 
@@ -146,13 +145,9 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 --color=selected-bg:#51576d \
 --multi"
 
-# export gnome-keybings
-alias export-keybindings="dconf dump /org/gnome/settings-daemon/plugins/media-keys/ > ~/.config/keybindings/media-keys && dconf dump /org/gnome/desktop/wm/keybindings/ > ~/.config/keybindings/wm-keybindings && dconf dump /org/gnome/shell/keybindings/ > ~/.config/keybindings/shell-keybindings && dconf dump /org/gnome/mutter/keybindings/ > ~/.config/keybindings/mutter-keybindings && dconf dump /org/gnome/mutter/wayland/keybindings/ > ~/.config/keybindings/wayland-keybindings"
-
 # set alias
 alias v="nvim"
 alias c="clear"
 
 # use vim-mode
 set -o vi
-
